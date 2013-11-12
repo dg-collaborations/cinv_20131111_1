@@ -10,11 +10,14 @@
     var results = [];
 
 		this.forEach(function(){
-				if (matcher.call(this)) {
-					results.push(this);
-				} 
+      var target = this;
+			 matcher.call(target) && results.push(target);
       });
 
 		return results;
   }
+
+  function match(){
+  }
+
 })(this)
