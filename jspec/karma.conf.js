@@ -19,6 +19,7 @@ module.exports = function(config){
 
       //mirroring the loading of files as they happen in the application.js file
       //will need to revisit this
+      jsAssetTree("utility"),
       jsAssetTree("movies"),
       'jspec/**/*_spec.js',
       {pattern: '**/*_spec.js', included: false}
