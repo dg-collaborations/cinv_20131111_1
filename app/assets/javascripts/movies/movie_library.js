@@ -19,11 +19,14 @@
 	}
 
 	proto.allPixarMovies = function() {
-		return allMoviesByStudio(STUDIOS.PIXAR);
+		return this.allMoviesByStudio(STUDIOS.PIXAR);
 	}
 
 	proto.allPixarOrDisneyMovies = function() {
-		
+		pixar = this.allMoviesByStudio(STUDIOS.PIXAR);
+		disney = this.allMoviesByStudio(STUDIOS.DISNEY);
+
+		return pixar.concat(disney);
 	}
 
 	proto.allMoviesNotPublishedByPixar = function() {
