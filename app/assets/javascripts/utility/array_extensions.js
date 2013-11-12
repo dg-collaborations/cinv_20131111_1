@@ -17,7 +17,20 @@
 		return results;
   }
 
-  function match(){
+  function match(haystack){
+  	this.haystack = haystack;
+  }
+
+  match.prototype.equalTo(needle) {
+  	var self = this;
+
+  	return function() {
+  		return (this[self.haystack] === needle);
+  	}
+  }
+
+  match.prototype.equalToAny() {
+
   }
 
 })(this)

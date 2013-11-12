@@ -82,7 +82,8 @@ describe('Movie Library', function(){
 
     describe('Searching for movies', function(){
       it('Can find all pixar movies', function(){
-        var results = sut.allPixarMovies();
+        var matcher = match("studio").equalTo(STUDIOS.PIXAR);
+        var results = sut.allMovies.filter(matcher);
 
         expect(results).toEqual([
           cars, 
@@ -91,8 +92,8 @@ describe('Movie Library', function(){
       });
 
       it('Can find all pixar or disney movies', function(){
-        var results = sut.allPixarOrDisneyMovies();
-
+        var matcher = match("studio").equalToAny(STUDIOS.PIXAR, STUDIOS.DISNEY);
+        var results = sut.allMovies.filter(matcher);
 
         expect(results).toEqual([
           cars, 
