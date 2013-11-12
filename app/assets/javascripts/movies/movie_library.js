@@ -23,11 +23,12 @@
 	}
 
 	proto.allPixarOrDisneyMovies = function() {
-		// TOD
+		return allMoviesByStudio
 	}
 
 	proto.allMoviesNotPublishedByPixar = function() {
 
 	}
 
+	targetNamespace.MovieLibrary = MovieLibrary;
 })(this);
