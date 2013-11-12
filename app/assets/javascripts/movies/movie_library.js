@@ -8,14 +8,16 @@
 	// return all movies from studio
 	proto.allMoviesByStudio = function(studio_const) {
 		var return_array = [];
-		for(var i = 0; i<this.movies;i++) {
-			curr = this.movies[i];
 
-			if (curr.studio === studio_const) {
-				return_array.push(curr);
+		this.movies.forEach(
+			function() {
+				if (curr.studio === studio_const) {
+					return_array.push(curr);
+				}
 			}
-		}
-		return return_array;
+		)
+
+		return_array;
 	}
 
 	// return all movies not from studio
