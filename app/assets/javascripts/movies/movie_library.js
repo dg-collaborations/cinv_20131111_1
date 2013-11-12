@@ -23,7 +23,7 @@
 	}
 
 	proto.allPixarOrDisneyMovies = function() {
-		return allMoviesByStudio
+		
 	}
 
 	proto.allMoviesNotPublishedByPixar = function() {
